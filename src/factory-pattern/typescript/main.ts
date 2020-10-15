@@ -26,6 +26,10 @@ const user1 = userFactory.createUser(user1Opts);
 const user2 = userFactory.createUser(user2Opts);
 const user3 = userFactory.createUser(user3Opts);
 
+/**
+ * Log a warning message showing the amount of warnings a user has
+ * @param user 
+ */
 const userWarningMessage = (user: User) => console.log(`${user.firstName} has ${user.warnings} warnings`);
 
 user1.greet(user2);

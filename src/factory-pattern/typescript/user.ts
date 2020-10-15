@@ -19,11 +19,20 @@ export class User {
         this._warnings = Warnings;
     }
 
+    /**
+     * 
+     * @param FirstName 
+     * @param LastName 
+     */
     public constructor (FirstName: string, LastName: string) {
         this._firstName = FirstName;
         this._lastName = LastName;
     }
 
+    /**
+     * Greet a User
+     * @param user 
+     */
     public greet(user: User) {
         console.log(`Hello ${user.firstName} ${user.lastName}, my name is ${this._firstName} ${this._lastName}`);
     }

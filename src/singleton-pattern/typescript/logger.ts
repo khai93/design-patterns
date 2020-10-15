@@ -11,6 +11,9 @@ class Logger {
 
     private constructor() {}
 
+    /**
+     * @returns current instance of the logger
+     */
     public static getInstance(): Logger {
         if (!Logger._instance) {
             Logger._instance = new Logger();
@@ -19,6 +22,11 @@ class Logger {
         return Logger._instance;
     }
 
+    /**
+     * Log a message based on logTYpe
+     * @param message 
+     * @param logType 
+     */
     public log(message: string, logType: LogType) {
         switch(logType) {
             default:
