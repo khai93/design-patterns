@@ -13,20 +13,20 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.VipUser = void 0;
+exports.AdminUser = void 0;
 var user_1 = require("./user");
-var VipUser = /** @class */ (function (_super) {
-    __extends(VipUser, _super);
-    function VipUser(firstName, lastName) {
+var AdminUser = /** @class */ (function (_super) {
+    __extends(AdminUser, _super);
+    function AdminUser(firstName, lastName) {
         return _super.call(this, firstName, lastName) || this;
     }
-    // Overriding inheried user greet
-    VipUser.prototype.greet = function (user) {
-        console.log("Hello " + user.firstName + " " + user.lastName + ", I am a VIP user and my name is " + user.firstName + " " + user.lastName);
+    AdminUser.prototype.greet = function (user) {
+        console.log("Hi " + user.firstName + " " + user.lastName + ", I am an admin.");
     };
-    VipUser.prototype.insult = function (user) {
-        console.log("You smell, " + user.firstName);
+    AdminUser.prototype.warn = function (user) {
+        console.log("You have been warned, " + user.firstName + ".");
+        user.warnings = user.warnings + 1;
     };
-    return VipUser;
+    return AdminUser;
 }(user_1.User));
-exports.VipUser = VipUser;
+exports.AdminUser = AdminUser;

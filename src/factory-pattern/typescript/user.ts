@@ -12,7 +12,11 @@ export class User {
     }
 
     get warnings(): number {
-        return this._warnings
+        return this._warnings;
+    }
+
+    set warnings(Warnings: number) {
+        this._warnings = Warnings;
     }
 
     public constructor (FirstName: string, LastName: string) {
